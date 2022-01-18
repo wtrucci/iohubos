@@ -1,4 +1,4 @@
-## Scenario
+# Scenario
 
 To service or maintain a PLC or HMI in a factory, we need to connect remotely. Often it is complicated to access directly to the PLC and in addition to an internet access, a public IP or a port forward are required which are often not available. IOhubOS integrates a VPN client to make this unnecessary.
 If IOhubOS is connected to the internet (the only thing required) it becomes easily and safely reachable by the customer who needs to make maintenance to the PLC or access to the resources of IOhubOS or of the installed applications.
