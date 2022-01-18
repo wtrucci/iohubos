@@ -83,7 +83,7 @@ The IOhubOS VPN container automatically generates the keys so you don't need to 
 
 ### Server configuration
 
-This is an example of `/etc/wireguard/wg0.conf`
+Example of `/etc/wireguard/wg0.conf`
 
 ```text
 [Interface]
@@ -110,16 +110,16 @@ AllowedIPs = 100.90.56.3/32
 
 - `PrivateKey` Wireguard Server private key
 
-- `[Peer]` definition client variables (one per clients)
+- `[Peer]` definition client variables (one per client)
 
 - `PublicKey` public key of the client
 - `AllowedIPs` defines the IP address of the client. For IOhubOS, add the classes that must be reachable by other clients. For example 192.168.10.0/24 is added to AllowedIPs represents the PLC network that must be reachable by other clients in VPN.
 
-After editing the file, activate the vpn tunnel with `wg-quick up wg0`
+After editing the file, activate the VPN tunnel with `wg-quick up wg0`
 
 ## Client example
 
-This is an example configuration of a client that once connected accesses the PLC network 192.168.10.0/24
+Configuration of a client to connect the PLC on the network `192.168.10.0/24`
 
 ```text
 [Interface]
@@ -149,4 +149,4 @@ PersistentKeepalive = 25
 
 - `PersistentKeepalive` keepalive for firewall NAT in seconds
 
-The `AllowedIPs` on the client allow you to define the destinations are then the routes that are dynamically added to the client connection.
+The `AllowedIPs` on the client allows you to define the routes that are dynamically added to the client connection.
